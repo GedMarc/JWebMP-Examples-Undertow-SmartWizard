@@ -1,0 +1,84 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>za.co.mmagon.jwebswing.examples.undertow</groupId>
+    <artifactId>smartwizard</artifactId>
+    <version>0.0.0_0</version>
+    <packaging>jar</packaging>
+
+    <name>Undertow - Smart Wizard</name>
+    <description>Smart Wizard example for Undertow
+    </description>
+    <url>https://github.com/GedMarc/JWebSwing-Examples-Undertow-SmartWizard</url>
+
+    <repositories>
+        <repository>
+            <snapshots/>
+            <id>snapshots</id>
+            <name>libs-snapshot</name>
+            <url>https://jwebswing.com/artifactory/libs-snapshot</url>
+        </repository>
+    </repositories>
+
+    <issueManagement>
+        <system>Github</system>
+        <url>https://github.com/GedMarc/JWebSwing-Examples-Undertow-SmartWizard/issues</url>
+    </issueManagement>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <netbeans.hint.license>gpl30</netbeans.hint.license>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
+        <jwebswing.version>0.0.0_0</jwebswing.version>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>za.co.mmagon</groupId>
+            <artifactId>jwebswing</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>za.co.mmagon</groupId>
+            <artifactId>jwebswing-undertow</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>za.co.mmagon</groupId>
+            <artifactId>jwebswing-data-tables</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>za.co.mmagon</groupId>
+            <artifactId>jwebswing-jquery-ui</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>za.co.mmagon</groupId>
+            <artifactId>jwebswing-datatables-undertow</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.undertow</groupId>
+            <artifactId>undertow-core</artifactId>
+            <version>1.4.21.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.undertow</groupId>
+            <artifactId>undertow-servlet</artifactId>
+            <version>1.4.21.Final</version>
+        </dependency>
+
+    </dependencies>
+</project>
