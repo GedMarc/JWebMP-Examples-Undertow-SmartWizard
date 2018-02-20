@@ -51,20 +51,13 @@
 
         <dependency>
             <groupId>za.co.mmagon</groupId>
-            <artifactId>jwebswing-data-tables</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>za.co.mmagon</groupId>
             <artifactId>jwebswing-jquery-ui</artifactId>
             <version>${project.version}</version>
         </dependency>
 
-
         <dependency>
             <groupId>za.co.mmagon</groupId>
-            <artifactId>jwebswing-datatables-undertow</artifactId>
+            <artifactId>jwebswing-smart-wizard</artifactId>
             <version>${project.version}</version>
         </dependency>
 

@@ -21,6 +21,7 @@ public class SmartWizardUndertow extends Page
 	{
 		super("JWebSwing - Smart Wizard Demo");
 
+
 	}
 
 	/**
