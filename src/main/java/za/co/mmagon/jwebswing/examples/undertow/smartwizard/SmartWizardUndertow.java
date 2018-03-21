@@ -22,7 +22,8 @@ import java.util.logging.Handler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class SmartWizardUndertow extends Page
+public class SmartWizardUndertow
+		extends Page
 {
 	public SmartWizardUndertow()
 	{
@@ -30,48 +31,44 @@ public class SmartWizardUndertow extends Page
 
 		SmartWizard sw = new SmartWizard("test");
 		sw.getSteps()
-				.add(new SmartWizardStep(new Div<>().add("Content 1"), new SmartWizardStepItem("Header", new SmallText("Description 1"))));
+		  .add(new SmartWizardStep(new Div<>().add("Content 1"), new SmartWizardStepItem("Header", new SmallText("Description 1"))));
 		sw.getSteps()
-				.add(new SmartWizardStep(new Div<>().add("Content 2"),
-				                         new SmartWizardStepItem("Header 2", new SmallText("Description 2"))));
+		  .add(new SmartWizardStep(new Div<>().add("Content 2"), new SmartWizardStepItem("Header 2", new SmallText("Description 2"))));
 		sw.getSteps()
-				.add(new SmartWizardStep(new Div<>().add("Content 3"),
-				                         new SmartWizardStepItem("Header 3", new SmallText("Description 3"))));
-		add(sw);
+		  .add(new SmartWizardStep(new Div<>().add("Content 3"), new SmartWizardStepItem("Header 3", new SmallText("Description 3"))));
+		getBody().add(sw);
 
 
 		SmartWizard sw2 = new SmartWizard("testme");
 		sw2.getFeature()
-				.getOptions()
-				.setContentCache(true);
+		   .getOptions()
+		   .setContentCache(true);
 		sw2.getFeature()
-				.getOptions()
-				.setCycleSteps(true);
+		   .getOptions()
+		   .setCycleSteps(true);
 		sw2.getFeature()
-				.getOptions()
-				.getLang()
-				.setNext("Next Text");
+		   .getOptions()
+		   .getLang()
+		   .setNext("Next Text");
 		sw2.getFeature()
-				.getOptions()
-				.setContentCache(true);
+		   .getOptions()
+		   .setContentCache(true);
 
 		sw2.getFeature()
-				.getOptions()
-				.setTheme(SmartWizardThemes.Circles);
+		   .getOptions()
+		   .setTheme(SmartWizardThemes.Circles);
 		sw2.getFeature()
-				.getOptions()
-				.setTransitionEffect(SmartWizardTransitionEffects.slide);
+		   .getOptions()
+		   .setTransitionEffect(SmartWizardTransitionEffects.slide);
 
 		sw2.getSteps()
-				.add(new SmartWizardStep(new Div<>().add("Content 1"), new SmartWizardStepItem("Header", new SmallText("Description 1"))));
+		   .add(new SmartWizardStep(new Div<>().add("Content 1"), new SmartWizardStepItem("Header", new SmallText("Description 1"))));
 		sw2.getSteps()
-				.add(new SmartWizardStep(new Div<>().add("Content 2"),
-				                         new SmartWizardStepItem("Header 2", new SmallText("Description 2"))));
+		   .add(new SmartWizardStep(new Div<>().add("Content 2"), new SmartWizardStepItem("Header 2", new SmallText("Description 2"))));
 		sw2.getSteps()
-				.add(new SmartWizardStep(new Div<>().add("Content 3"),
-				                         new SmartWizardStepItem("Header 3", new SmallText("Description 3"))));
+		   .add(new SmartWizardStep(new Div<>().add("Content 3"), new SmartWizardStepItem("Header 3", new SmallText("Description 3"))));
 
-		add(sw2);
+		getBody().add(sw2);
 	}
 
 	/**
@@ -84,22 +81,22 @@ public class SmartWizardUndertow extends Page
 	public static void main(String[] args) throws ServletException
 	{
 		Handler[] handles = Logger.getLogger("")
-				                    .getHandlers();
+		                          .getHandlers();
 		for (Handler handle : handles)
 		{
 			handle.setLevel(Level.FINE);
 		}
 		LogFactory.setDefaultLevel(Level.FINE);
 		Logger.getLogger("")
-				.addHandler(new ConsoleSTDOutputHandler(true));
+		      .addHandler(new ConsoleSTDOutputHandler(true));
 
 		DeploymentInfo servletBuilder = Servlets.deployment()
-				                                .setClassLoader(SmartWizardUndertow.class.getClassLoader())
-				                                .setContextPath("/")
-				                                .setDeploymentName("smartwizarddemo.war");
+		                                        .setClassLoader(SmartWizardUndertow.class.getClassLoader())
+		                                        .setContextPath("/")
+		                                        .setDeploymentName("smartwizarddemo.war");
 
 		DeploymentManager manager = Servlets.defaultContainer()
-				                            .addDeployment(servletBuilder);
+		                                    .addDeployment(servletBuilder);
 
 		manager.deploy();
 		GuiceContext.inject();
@@ -107,9 +104,9 @@ public class SmartWizardUndertow extends Page
 		HttpHandler jwebSwingHandler = manager.start();
 
 		Undertow server = Undertow.builder()
-				                  .addHttpListener(6002, "localhost")
-				                  .setHandler(jwebSwingHandler)
-				                  .build();
+		                          .addHttpListener(6002, "localhost")
+		                          .setHandler(jwebSwingHandler)
+		                          .build();
 
 		server.start();
 	}
