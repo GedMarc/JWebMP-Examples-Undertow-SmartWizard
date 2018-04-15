@@ -49,32 +49,32 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 
-        <jwebswing.version>0.0.0_0</jwebswing.version>
+        <jwebmp.version>0.0.0_0</jwebmp.version>
     </properties>
 
     <dependencies>
 
         <dependency>
-            <groupId>za.co.mmagon</groupId>
-            <artifactId>jwebswing</artifactId>
+            <groupId>com.jwebmp</groupId>
+            <artifactId>jwebmp-core</artifactId>
             <version>${project.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>za.co.mmagon</groupId>
-            <artifactId>jwebswing-undertow</artifactId>
+            <groupId>com.jwebmp</groupId>
+            <artifactId>jwebmp-undertow</artifactId>
             <version>${project.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>za.co.mmagon</groupId>
-            <artifactId>jwebswing-jquery-ui</artifactId>
+            <groupId>com.jwebmp</groupId>
+            <artifactId>jwebmp-jquery-ui</artifactId>
             <version>${project.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>za.co.mmagon</groupId>
-            <artifactId>jwebswing-smart-wizard</artifactId>
+            <groupId>com.jwebmp</groupId>
+            <artifactId>jwebmp-smart-wizard</artifactId>
             <version>${project.version}</version>
         </dependency>
 
