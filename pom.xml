@@ -4,7 +4,7 @@
 
     <groupId>com.jwebmp.examples.undertow</groupId>
     <artifactId>smartwizard</artifactId>
-    <version>0.0.0_0</version>
+    <version>0.0.0_0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Undertow - Smart Wizard</name>
@@ -28,11 +28,12 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <netbeans.hint.license>gpl30</netbeans.hint.license>         <license.dir>${basedir}</license.dir>
+        <netbeans.hint.license>gpl30</netbeans.hint.license>
+        <license.dir>${basedir}</license.dir>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 
-        <jwebmp.version>0.0.0_0</jwebmp.version>
+        <jwebmp.version>0.0.0_0-SNAPSHOT</jwebmp.version>
     </properties>
 
     <dependencies>
