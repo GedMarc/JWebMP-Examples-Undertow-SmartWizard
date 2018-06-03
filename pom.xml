@@ -94,4 +94,61 @@
             </plugin>
         </plugins>
     </build>
+
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>snapshot</id>
+            <name>JWebMPArtifactory-snapshots</name>
+            <url>https://jwebmp.com/artifactory/libs-snapshot-local</url>
+        </snapshotRepository>
+        <repository>
+            <id>central</id>
+            <name>JWebMPArtifactory-releases</name>
+            <url>https://jwebmp.com/artifactory/libs-release-local</url>
+        </repository>
+    </distributionManagement>
+
+    <organization>
+        <name>Marc Magon</name>
+        <url>https://www.jwebmp.com/</url>
+    </organization>
+
+    <scm>
+        <url>https://github.com/GedMarc/JWebMP</url>
+        <developerConnection>https://jwebmp.com/jira</developerConnection>
+    </scm>
+
+    <ciManagement>
+        <system>TeamCity</system>
+        <url>http://jwebmp.com/teamcity</url>
+    </ciManagement>
+
+    <developers>
+        <developer>
+            <id>GedMarc</id>
+            <name>Marc Magon</name>
+            <email>marc.magon@gmail.com</email>
+            <url>https://github.com/GedMarc</url>
+        </developer>
+    </developers>
+
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.7.9</version>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>report</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+        </plugins>
+    </reporting>
+
 </project>
