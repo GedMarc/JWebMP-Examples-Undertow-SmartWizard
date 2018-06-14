@@ -22,7 +22,6 @@ import com.jwebmp.base.html.Div;
 import com.jwebmp.base.html.SmallText;
 import com.jwebmp.guiceinjection.GuiceContext;
 import com.jwebmp.logger.LogFactory;
-import com.jwebmp.logger.handlers.ConsoleSTDOutputHandler;
 import com.jwebmp.plugins.smartwizard.SmartWizard;
 import com.jwebmp.plugins.smartwizard.SmartWizardStep;
 import com.jwebmp.plugins.smartwizard.SmartWizardStepItem;
@@ -35,9 +34,7 @@ import io.undertow.servlet.api.DeploymentInfo;
 import io.undertow.servlet.api.DeploymentManager;
 
 import javax.servlet.ServletException;
-import java.util.logging.Handler;
 import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class SmartWizardUndertow
 		extends Page
@@ -97,15 +94,7 @@ public class SmartWizardUndertow
 	 */
 	public static void main(String[] args) throws ServletException
 	{
-		Handler[] handles = Logger.getLogger("")
-		                          .getHandlers();
-		for (Handler handle : handles)
-		{
-			handle.setLevel(Level.FINE);
-		}
-		LogFactory.setDefaultLevel(Level.FINE);
-		Logger.getLogger("")
-		      .addHandler(new ConsoleSTDOutputHandler(true));
+		LogFactory.configureConsoleColourOutput(Level.FINE);
 
 		DeploymentInfo servletBuilder = Servlets.deployment()
 		                                        .setClassLoader(SmartWizardUndertow.class.getClassLoader())
