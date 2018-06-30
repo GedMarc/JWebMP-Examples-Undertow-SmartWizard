@@ -20,7 +20,7 @@ package com.jwebmp.examples.undertow.smartwizard;
 import com.jwebmp.Page;
 import com.jwebmp.base.html.Div;
 import com.jwebmp.base.html.SmallText;
-import com.jwebmp.guiceinjection.GuiceContext;
+import com.jwebmp.guicedinjection.GuiceContext;
 import com.jwebmp.logger.LogFactory;
 import com.jwebmp.plugins.smartwizard.SmartWizard;
 import com.jwebmp.plugins.smartwizard.SmartWizardStep;
@@ -51,7 +51,6 @@ public class SmartWizardUndertow
 		sw.getSteps()
 		  .add(new SmartWizardStep(new Div<>().add("Content 3"), new SmartWizardStepItem("Header 3", new SmallText("Description 3"))));
 		getBody().add(sw);
-
 
 		SmartWizard sw2 = new SmartWizard("testme");
 		sw2.getFeature()
