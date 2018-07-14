@@ -2,9 +2,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>com.jwebmp</groupId>
+        <artifactId>jwebmp-bom</artifactId>
+        <version>0.0.0_0-SNAPSHOT</version>
+    </parent>
+
     <groupId>com.jwebmp.examples.undertow</groupId>
     <artifactId>smartwizard</artifactId>
-    <version>0.0.0_0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Undertow - Smart Wizard</name>
@@ -12,29 +17,10 @@
     </description>
     <url>https://github.com/GedMarc/JWebSwing-Examples-Undertow-SmartWizard</url>
 
-    <repositories>
-        <repository>
-            <snapshots/>
-            <id>snapshots</id>
-            <name>libs-snapshot</name>
-            <url>https://jwebmp.com/artifactory/libs-snapshot</url>
-        </repository>
-    </repositories>
-
     <issueManagement>
         <system>Github</system>
         <url>https://github.com/GedMarc/JWebSwing-Examples-Undertow-SmartWizard/issues</url>
     </issueManagement>
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <netbeans.hint.license>gpl30</netbeans.hint.license>
-        <license.dir>${basedir}</license.dir>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-
-        <jwebmp.version>0.0.0_0-SNAPSHOT</jwebmp.version>
-    </properties>
 
     <dependencies>
 
@@ -42,77 +28,31 @@
             <groupId>com.jwebmp</groupId>
             <artifactId>jwebmp-core</artifactId>
             <version>${project.version}</version>
+            <classifier>${jwebmp.runtime.classifier}</classifier>
         </dependency>
 
         <dependency>
             <groupId>com.jwebmp</groupId>
             <artifactId>jwebmp-undertow</artifactId>
             <version>${project.version}</version>
+            <classifier>${jwebmp.runtime.classifier}</classifier>
         </dependency>
 
         <dependency>
             <groupId>com.jwebmp</groupId>
             <artifactId>jwebmp-jquery-ui</artifactId>
             <version>${project.version}</version>
+            <classifier>${jwebmp.runtime.classifier}</classifier>
         </dependency>
 
         <dependency>
             <groupId>com.jwebmp</groupId>
             <artifactId>jwebmp-smart-wizard</artifactId>
             <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>io.undertow</groupId>
-            <artifactId>undertow-core</artifactId>
-            <version>1.4.21.Final</version>
-        </dependency>
-
-        <dependency>
-            <groupId>io.undertow</groupId>
-            <artifactId>undertow-servlet</artifactId>
-            <version>1.4.21.Final</version>
+            <classifier>${jwebmp.runtime.classifier}</classifier>
         </dependency>
 
     </dependencies>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.sonarsource.scanner.maven</groupId>
-                <artifactId>sonar-maven-plugin</artifactId>
-                <version>3.3.0.603</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <version>2.7</version>
-            </plugin>
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.7.9</version>
-            </plugin>
-        </plugins>
-    </build>
-
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>snapshot</id>
-            <name>JWebMPArtifactory-snapshots</name>
-            <url>https://jwebmp.com/artifactory/libs-snapshot-local</url>
-        </snapshotRepository>
-        <repository>
-            <id>central</id>
-            <name>JWebMPArtifactory-releases</name>
-            <url>https://jwebmp.com/artifactory/libs-release-local</url>
-        </repository>
-    </distributionManagement>
-
-    <organization>
-        <name>Marc Magon</name>
-        <url>https://www.jwebmp.com/</url>
-    </organization>
 
     <scm>
         <url>https://github.com/GedMarc/JWebMP</url>
@@ -123,32 +63,4 @@
         <system>TeamCity</system>
         <url>http://jwebmp.com/teamcity</url>
     </ciManagement>
-
-    <developers>
-        <developer>
-            <id>GedMarc</id>
-            <name>Marc Magon</name>
-            <email>marc.magon@gmail.com</email>
-            <url>https://github.com/GedMarc</url>
-        </developer>
-    </developers>
-
-
-    <reporting>
-        <plugins>
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.7.9</version>
-                <reportSets>
-                    <reportSet>
-                        <reports>
-                            <report>report</report>
-                        </reports>
-                    </reportSet>
-                </reportSets>
-            </plugin>
-        </plugins>
-    </reporting>
-
 </project>
