@@ -17,9 +17,9 @@
 
 package com.jwebmp.examples.undertow.smartwizard;
 
-import com.jwebmp.Page;
-import com.jwebmp.base.html.Div;
-import com.jwebmp.base.html.SmallText;
+import com.jwebmp.core.Page;
+import com.jwebmp.core.base.html.Div;
+import com.jwebmp.core.base.html.SmallText;
 import com.jwebmp.guicedinjection.GuiceContext;
 import com.jwebmp.logger.LogFactory;
 import com.jwebmp.plugins.smartwizard.SmartWizard;
