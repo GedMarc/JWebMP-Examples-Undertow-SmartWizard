@@ -27,7 +27,6 @@
         <dependency>
             <groupId>com.jwebmp.inject.extensions</groupId>
             <artifactId>guice-servlet</artifactId>
-            <version>${project.version}</version>
         </dependency>
 
         <dependency>
@@ -46,45 +45,33 @@
         </dependency>
 
         <dependency>
-            <groupId>com.jwebmp</groupId>
+            <groupId>com.jwebmp.core</groupId>
             <artifactId>jwebmp-core</artifactId>
-            <version>${project.version}</version>
-            <classifier>${jwebmp.runtime.classifier}</classifier>
         </dependency>
 
         <dependency>
-            <groupId>com.jwebmp</groupId>
-            <artifactId>jwebmp-log-master</artifactId>
-            <version>${project.version}</version>
-            <classifier>${jwebmp.runtime.classifier}</classifier>
+            <groupId>com.jwebmp.guicedee</groupId>
+            <artifactId>guiced-log-master</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>com.jwebmp</groupId>
+            <groupId>com.jwebmp.guicedee</groupId>
             <artifactId>guiced-injection</artifactId>
-            <version>${project.version}</version>
-            <classifier>${jwebmp.runtime.classifier}</classifier>
         </dependency>
 
         <dependency>
-            <groupId>com.jwebmp</groupId>
-            <artifactId>jwebmp-undertow</artifactId>
-            <version>${project.version}</version>
-            <classifier>${jwebmp.runtime.classifier}</classifier>
+            <groupId>com.jwebmp.guicedee.servlets</groupId>
+            <artifactId>guiced-undertow</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>com.jwebmp</groupId>
+            <groupId>com.jwebmp.plugins.jquery</groupId>
             <artifactId>jwebmp-jquery-ui</artifactId>
-            <version>${project.version}</version>
-            <classifier>${jwebmp.runtime.classifier}</classifier>
         </dependency>
 
         <dependency>
-            <groupId>com.jwebmp</groupId>
+            <groupId>com.jwebmp.plugins.forms</groupId>
             <artifactId>jwebmp-smart-wizard</artifactId>
-            <version>${project.version}</version>
-            <classifier>${jwebmp.runtime.classifier}</classifier>
         </dependency>
 
     </dependencies>
