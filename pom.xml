@@ -23,22 +23,22 @@
     <dependencies>
 
         <dependency>
-            <groupId>com.jwebmp.inject.extensions</groupId>
+            <groupId>com.jwebmp.jpms.thirdparty</groupId>
             <artifactId>guice-servlet</artifactId><type>jar</type>
             </dependency>
 
         <dependency>
-            <groupId>com.jwebmp.jpms.thirdparty.undertow</groupId>
+            <groupId>com.jwebmp.jpms.thirdparty</groupId>
             <artifactId>undertow-core</artifactId><type>jar</type>
             </dependency>
 
         <dependency>
-            <groupId>com.jwebmp.jpms.thirdparty.undertow</groupId>
+            <groupId>com.jwebmp.jpms.thirdparty</groupId>
             <artifactId>undertow-servlet</artifactId><type>jar</type>
             </dependency>
 
         <dependency>
-            <groupId>com.jwebmp.jpms.thirdparty.undertow</groupId>
+            <groupId>com.jwebmp.jpms.thirdparty</groupId>
             <artifactId>undertow-websockets-jsr</artifactId><type>jar</type>
             </dependency>
         <dependency>
@@ -47,17 +47,17 @@
             </dependency>
 
         <dependency>
-            <groupId>com.jwebmp.guicedee</groupId>
+            <groupId>com.jwebmp.jpms.guicedee</groupId>
             <artifactId>guiced-log-master</artifactId><type>jar</type>
             </dependency>
 
         <dependency>
-            <groupId>com.jwebmp.guicedee</groupId>
+            <groupId>com.jwebmp.jpms.guicedee</groupId>
             <artifactId>guiced-injection</artifactId><type>jar</type>
             </dependency>
 
         <dependency>
-            <groupId>com.jwebmp.guicedee.servlets</groupId>
+            <groupId>com.jwebmp.jpms.guicedee.servlets</groupId>
             <artifactId>guiced-undertow</artifactId><type>jar</type>
             </dependency>
 
