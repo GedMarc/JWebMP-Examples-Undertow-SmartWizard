@@ -24,7 +24,7 @@
 
         <dependency>
             <groupId>com.guicedee.services</groupId>
-            <artifactId>guice-servlet</artifactId>
+            <artifactId>javax.servlet-api</artifactId>
             <type>jar</type>
         </dependency>
 
@@ -64,7 +64,7 @@
         </dependency>
 
         <dependency>
-            <groupId>com.guicedee.servlets</groupId>
+            <groupId>com.guicedee</groupId>
             <artifactId>guiced-undertow</artifactId>
             <type>jar</type>
         </dependency>
