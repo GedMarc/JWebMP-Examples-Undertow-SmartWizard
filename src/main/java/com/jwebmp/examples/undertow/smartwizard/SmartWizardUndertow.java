@@ -21,7 +21,7 @@ import com.jwebmp.core.Page;
 import com.jwebmp.core.base.html.Div;
 import com.jwebmp.core.base.html.SmallText;
 import com.guicedee.guicedinjection.GuiceContext;
-import com.guicedee.logger.LogFactory;
+
 import com.jwebmp.plugins.smartwizard4.SmartWizard;
 import com.jwebmp.plugins.smartwizard4.SmartWizardStep;
 import com.jwebmp.plugins.smartwizard4.SmartWizardStepItem;
